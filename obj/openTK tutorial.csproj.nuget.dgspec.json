@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\oderprojects\\openTK tutorial\\openTK tutorial\\openTK tutorial.csproj": {}
+    "/home/nova/RiderProjects/OpenTK-OpenGL-HELP/openTK tutorial.csproj": {}
   },
   "projects": {
-    "E:\\oderprojects\\openTK tutorial\\openTK tutorial\\openTK tutorial.csproj": {
+    "/home/nova/RiderProjects/OpenTK-OpenGL-HELP/openTK tutorial.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\oderprojects\\openTK tutorial\\openTK tutorial\\openTK tutorial.csproj",
+        "projectUniqueName": "/home/nova/RiderProjects/OpenTK-OpenGL-HELP/openTK tutorial.csproj",
         "projectName": "openTK tutorial",
-        "projectPath": "E:\\oderprojects\\openTK tutorial\\openTK tutorial\\openTK tutorial.csproj",
-        "packagesPath": "C:\\Users\\GHickman\\.nuget\\packages\\",
-        "outputPath": "E:\\oderprojects\\openTK tutorial\\openTK tutorial\\obj\\",
+        "projectPath": "/home/nova/RiderProjects/OpenTK-OpenGL-HELP/openTK tutorial.csproj",
+        "packagesPath": "/home/nova/.nuget/packages/",
+        "outputPath": "/home/nova/RiderProjects/OpenTK-OpenGL-HELP/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\GHickman\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/nova/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,15 +32,25 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.Windows.Compatibility": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
             "OpenTK": {
               "target": "Package",
-              "version": "[4.9.3, )"
+              "version": "[5.0.0-pre.10, )"
             }
           },
           "imports": [
@@ -54,12 +64,22 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.14, 8.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[8.0.14, 8.0.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.104/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

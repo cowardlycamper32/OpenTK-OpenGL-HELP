@@ -1,4 +1,6 @@
-﻿using OpenTK.Graphics.OpenGL4;
+﻿using System.Globalization;
+using System.Runtime.InteropServices;
+using OpenTK.Graphics.OpenGL4;
 using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 using OpenTK.Windowing.GraphicsLibraryFramework;
@@ -7,6 +9,9 @@ namespace TestOne
 {
     public class Game : GameWindow
     {
+        public string RUNHOME = "/home/nova/RiderProjects/OpenTK-OpenGL-HELP/";
+        
+        
         private int VertexBufferObject;
         private Shader shader;
         public Game(int width, int height, string title) : base(GameWindowSettings.Default,
@@ -31,7 +36,15 @@ namespace TestOne
             VertexBufferObject = GL.GenBuffer();
             GL.BindBuffer(BufferTarget.ArrayBuffer, VertexBufferObject);
             GL.BufferData(BufferTarget.ArrayBuffer, vertices.Length * sizeof(float), vertices, BufferUsageHint.StaticDraw);
-            shader = new Shader("..\\..\\..\\shader.vert", "..\\..\\..\\shader.frag");
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                 shader = new Shader(RUNHOME + "\\shader.vert", RUNHOME + "\\shader.frag");
+            }
+            else
+            {
+                shader = new Shader(RUNHOME + "/shader.vert", RUNHOME + "/shader.frag");
+            }
+           
             //code here later pls
         }
 
